@@ -1,1 +1,355 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="A responsive, accessible mega menu with contextual previews, keyboard navigation and a no-JavaScript fallback."
+    >
+    <meta name="color-scheme" content="dark light">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    >
+    <title>Smart Mega Menu with Context Preview</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
 
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="#top" aria-label="NOVA home">
+          <svg class="brand__mark" viewBox="0 0 36 36" aria-hidden="true">
+            <path d="M5 18 18 5l13 13-13 13L5 18Z"></path>
+            <path d="m12 18 6-6 6 6-6 6-6-6Z"></path>
+          </svg>
+          <span>NOVA</span>
+        </a>
+
+        <button
+          class="site-nav__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span class="site-nav__toggle-label">Menu</span>
+          <span class="site-nav__toggle-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+          <ul class="site-nav__list">
+            <li class="site-nav__item site-nav__item--mega">
+              <!-- Details provides a functional disclosure when JavaScript is unavailable. -->
+              <details class="mega-menu">
+                <summary class="nav-link nav-link--summary">
+                  Solutions
+                  <svg viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="m4 6 4 4 4-4"></path>
+                  </svg>
+                </summary>
+
+                <div class="mega-menu__surface">
+                  <button class="mega-menu__close" type="button" aria-label="Close solutions menu">
+                    <svg viewBox="0 0 20 20" aria-hidden="true">
+                      <path d="m5 5 10 10M15 5 5 15"></path>
+                    </svg>
+                  </button>
+
+                  <div class="mega-menu__heading">
+                    <div>
+                      <p class="eyebrow">Explore the NOVA ecosystem</p>
+                      <p class="mega-menu__headline">One workspace. Every ambitious idea.</p>
+                    </div>
+                    <p class="mega-menu__hint">Hover, focus or select a category to see its context.</p>
+                  </div>
+
+                  <div class="mega-menu__layout">
+                    <div class="category-column" aria-label="Solution categories">
+                      <p class="section-label">Solutions</p>
+                      <ul class="category-list">
+                        <li>
+                          <a
+                            class="category-card is-active"
+                            href="#platforms"
+                            data-preview="platforms"
+                            aria-controls="context-preview"
+                            aria-current="true"
+                          >
+                            <span class="category-card__number">01</span>
+                            <span class="category-card__content">
+                              <span class="category-card__title">Digital platforms</span>
+                              <span class="category-card__description">
+                                Modular systems for teams building products at scale.
+                              </span>
+                            </span>
+                            <svg class="category-card__arrow" viewBox="0 0 20 20" aria-hidden="true">
+                              <path d="M4 10h11M11 6l4 4-4 4"></path>
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="category-card"
+                            href="#commerce"
+                            data-preview="commerce"
+                            aria-controls="context-preview"
+                          >
+                            <span class="category-card__number">02</span>
+                            <span class="category-card__content">
+                              <span class="category-card__title">Commerce experiences</span>
+                              <span class="category-card__description">
+                                Expressive storefronts designed to convert naturally.
+                              </span>
+                            </span>
+                            <svg class="category-card__arrow" viewBox="0 0 20 20" aria-hidden="true">
+                              <path d="M4 10h11M11 6l4 4-4 4"></path>
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="category-card"
+                            href="#insights"
+                            data-preview="insights"
+                            aria-controls="context-preview"
+                          >
+                            <span class="category-card__number">03</span>
+                            <span class="category-card__content">
+                              <span class="category-card__title">Intelligent insights</span>
+                              <span class="category-card__description">
+                                Clear signals and decisions from complex product data.
+                              </span>
+                            </span>
+                            <svg class="category-card__arrow" viewBox="0 0 20 20" aria-hidden="true">
+                              <path d="M4 10h11M11 6l4 4-4 4"></path>
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="category-card"
+                            href="#automation"
+                            data-preview="automation"
+                            aria-controls="context-preview"
+                          >
+                            <span class="category-card__number">04</span>
+                            <span class="category-card__content">
+                              <span class="category-card__title">Workflow automation</span>
+                              <span class="category-card__description">
+                                Connected tools that move routine work forward.
+                              </span>
+                            </span>
+                            <svg class="category-card__arrow" viewBox="0 0 20 20" aria-hidden="true">
+                              <path d="M4 10h11M11 6l4 4-4 4"></path>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+
+                      <noscript>
+                        <p class="no-js-note">
+                          JavaScript is off. Each solution link still takes you to its overview below.
+                        </p>
+                      </noscript>
+                    </div>
+
+                    <section
+                      class="context-preview"
+                      id="context-preview"
+                      data-active-preview="platforms"
+                      aria-labelledby="preview-title"
+                    >
+                      <div class="context-preview__visual" aria-hidden="true">
+                        <div class="preview-grid"></div>
+                        <div class="preview-glow"></div>
+
+                        <!-- All artwork is present in the DOM; JavaScript only changes visibility. -->
+                        <div class="preview-scene preview-scene--platforms is-active" data-scene="platforms">
+                          <div class="browser-card">
+                            <div class="browser-card__bar">
+                              <span></span><span></span><span></span>
+                              <i></i>
+                            </div>
+                            <div class="browser-card__body">
+                              <div class="browser-card__side">
+                                <b></b><i></i><i></i><i></i>
+                              </div>
+                              <div class="browser-card__main">
+                                <span class="mini-tag">Workspace / 04</span>
+                                <strong>Build what<br>comes next.</strong>
+                                <div class="mini-cards"><i></i><i></i><i></i></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="floating-chip floating-chip--one">12 modules</span>
+                          <span class="floating-chip floating-chip--two">Live</span>
+                        </div>
+
+                        <div class="preview-scene preview-scene--commerce" data-scene="commerce">
+                          <div class="product-card">
+                            <span class="product-card__tag">Edition 02</span>
+                            <div class="product-card__object">
+                              <span></span>
+                            </div>
+                            <div class="product-card__meta">
+                              <strong>Orbit Lamp</strong>
+                              <span>$240</span>
+                            </div>
+                          </div>
+                          <div class="cart-toast">
+                            <span class="cart-toast__icon">+</span>
+                            <span><b>Added to collection</b><small>Ready to configure</small></span>
+                          </div>
+                        </div>
+
+                        <div class="preview-scene preview-scene--insights" data-scene="insights">
+                          <div class="insight-card">
+                            <div class="insight-card__top">
+                              <span>Audience pulse</span>
+                              <b>+28.4%</b>
+                            </div>
+                            <svg class="line-chart" viewBox="0 0 420 190" preserveAspectRatio="none">
+                              <defs>
+                                <linearGradient id="chart-fill" x1="0" y1="0" x2="0" y2="1">
+                                  <stop offset="0" stop-color="currentColor" stop-opacity=".42"></stop>
+                                  <stop offset="1" stop-color="currentColor" stop-opacity="0"></stop>
+                                </linearGradient>
+                              </defs>
+                              <path class="line-chart__area" d="M0 168C48 152 67 164 104 129s55-2 94-35 68 23 107-20 71-24 115-67v183H0Z"></path>
+                              <path class="line-chart__line" d="M0 168C48 152 67 164 104 129s55-2 94-35 68 23 107-20 71-24 115-67"></path>
+                            </svg>
+                            <div class="insight-card__axis"><span>MON</span><span>WED</span><span>FRI</span><span>SUN</span></div>
+                          </div>
+                          <div class="metric-pill"><span>Active now</span><b>8,942</b></div>
+                        </div>
+
+                        <div class="preview-scene preview-scene--automation" data-scene="automation">
+                          <svg class="flow-lines" viewBox="0 0 520 300" preserveAspectRatio="none">
+                            <path d="M102 150h90c44 0 35-75 85-75h65"></path>
+                            <path d="M192 150h80c44 0 37 75 87 75h60"></path>
+                          </svg>
+                          <div class="flow-node flow-node--trigger"><span>01</span><b>New brief</b></div>
+                          <div class="flow-node flow-node--logic"><span>AI</span><b>Route task</b></div>
+                          <div class="flow-node flow-node--output-a"><span>✓</span><b>Design team</b></div>
+                          <div class="flow-node flow-node--output-b"><span>✓</span><b>Build team</b></div>
+                        </div>
+                      </div>
+
+                      <div class="context-preview__copy">
+                        <p class="eyebrow" id="preview-eyebrow">Connected product systems</p>
+                        <h2 id="preview-title">Digital platforms that feel unmistakably yours.</h2>
+                        <p class="context-preview__description" id="preview-description">
+                          Design and ship flexible product ecosystems with a shared foundation for every team.
+                        </p>
+                        <ul class="benefit-list" aria-label="Key benefits">
+                          <li><span></span><b>Composable architecture</b></li>
+                          <li><span></span><b>Unified design language</b></li>
+                          <li><span></span><b>Built to evolve</b></li>
+                        </ul>
+                        <a class="context-preview__cta" id="preview-cta" href="#platforms">
+                          <span>Explore digital platforms</span>
+                          <svg viewBox="0 0 20 20" aria-hidden="true">
+                            <path d="M4 10h11M11 6l4 4-4 4"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </section>
+                  </div>
+
+                  <p class="sr-only" id="preview-status" aria-live="polite"></p>
+                </div>
+              </details>
+            </li>
+            <li class="site-nav__item"><a class="nav-link" href="#work">Work</a></li>
+            <li class="site-nav__item"><a class="nav-link" href="#about">About</a></li>
+            <li class="site-nav__item"><a class="nav-link" href="#journal">Journal</a></li>
+          </ul>
+
+          <a class="header-cta" href="#contact">
+            Start a project
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M4 10h11M11 6l4 4-4 4"></path>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero__content" id="about">
+          <p class="hero__kicker"><span></span> Interface experiment / 02</p>
+          <h1 id="hero-title">Navigation that reveals the <em>right next step.</em></h1>
+          <p class="hero__lede">
+            A smart mega menu that turns a list of links into a focused, visual decision surface—without compromising accessibility.
+          </p>
+          <a class="hero__link" href="#component-notes">
+            Explore the interaction
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <aside class="spec-card" aria-label="Component capabilities">
+          <div class="spec-card__top">
+            <span>SMART / MENU</span>
+            <span class="status-dot">Ready</span>
+          </div>
+          <div class="spec-card__diagram" aria-hidden="true">
+            <div class="diagram-label">Input</div>
+            <div class="diagram-node diagram-node--one">Hover</div>
+            <div class="diagram-node diagram-node--two">Focus</div>
+            <div class="diagram-line"></div>
+            <div class="diagram-output">Context<br>preview</div>
+          </div>
+          <dl class="spec-card__stats">
+            <div><dt>Modes</dt><dd>02</dd></div>
+            <div><dt>Categories</dt><dd>04</dd></div>
+            <div><dt>Fallback</dt><dd>Native</dd></div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="component-notes" id="component-notes" aria-labelledby="notes-title">
+        <div class="component-notes__heading">
+          <p class="eyebrow">Designed for real interfaces</p>
+          <h2 id="notes-title">Four paths, one coherent experience.</h2>
+        </div>
+
+        <div class="solution-grid" id="work">
+          <article class="solution-card" id="platforms">
+            <span>01</span>
+            <h3>Digital platforms</h3>
+            <p>Composable interfaces and scalable foundations for evolving digital products.</p>
+          </article>
+          <article class="solution-card" id="commerce">
+            <span>02</span>
+            <h3>Commerce experiences</h3>
+            <p>Focused discovery journeys that connect strong brand expression with conversion.</p>
+          </article>
+          <article class="solution-card" id="insights">
+            <span>03</span>
+            <h3>Intelligent insights</h3>
+            <p>Useful dashboards that turn live product data into legible, actionable signals.</p>
+          </article>
+          <article class="solution-card" id="automation">
+            <span>04</span>
+            <h3>Workflow automation</h3>
+            <p>Connected processes that remove repetitive work while keeping people in control.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <span id="journal">NOVA / DIGITAL PRACTICE</span>
+      <span>Smart Mega Menu — UI Component 02</span>
+    </footer>
+  </body>
+</html>
