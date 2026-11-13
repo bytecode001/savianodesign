@@ -156,7 +156,7 @@ h1 em,h2 em {
 }
 .script-title {
   font-family:var(--script);
-  font-size:52px;
+  font-size:22px;
   line-height:1.1;
   color:var(--terra);
   font-weight:400;
@@ -400,7 +400,7 @@ body[data-page=home] .site-header {
   padding-bottom:40px;
 }
 .hero-content .script-title {
-  font-size:67px;
+  font-size:36px;
   color:#f0b495;
   margin-bottom:6px;
   text-shadow:0 2px 15px #0004;
@@ -729,7 +729,7 @@ body[data-page=home] .site-header {
 }
 .booking-band .script-title {
   color:#e99d7c;
-  font-size:48px;
+  font-size:24px;
 }
 .booking-band h2 {
   font-size:35px;
@@ -949,7 +949,7 @@ body[data-page=home] .site-header {
 .page-intro .eyebrow {
   font-family:var(--script);
   font-weight:400;
-  font-size:47px;
+  font-size:26px;
   text-transform:none;
   letter-spacing:0;
   color:var(--terra);
@@ -1459,7 +1459,7 @@ body[data-page=home] .site-header {
     font-size:66px;
   }
   .hero-content .script-title {
-    font-size:60px;
+    font-size:34px;
   }
   .hero-carousel {
     min-height:620px;
@@ -1560,7 +1560,7 @@ body[data-page=home] .site-header {
     font-size:62px;
   }
   .hero-content .script-title {
-    font-size:55px;
+    font-size:30px;
   }
   .hero-content {
     padding-top:50px;
@@ -1600,7 +1600,7 @@ body[data-page=home] .site-header {
     font-size:26px;
   }
   .section-title .script-title {
-    font-size:48px;
+    font-size:20px;
   }
   .compact-menu {
     column-gap:30px;
@@ -1753,7 +1753,7 @@ body[data-page=home] .site-header {
     width:calc(100% - 65px);
   }
   .hero-content .script-title {
-    font-size:47px;
+    font-size:26px;
     margin-bottom:10px;
   }
   .hero-content h1,.hero-content h2 {
@@ -1822,7 +1822,7 @@ body[data-page=home] .site-header {
     margin-bottom:28px;
   }
   .section-title .script-title {
-    font-size:45px;
+    font-size:18px;
   }
   .section-title h2 {
     font-size:23px;
@@ -1927,7 +1927,7 @@ body[data-page=home] .site-header {
     padding:58px 0;
   }
   .booking-band .script-title {
-    font-size:43px;
+    font-size:20px;
   }
   .booking-band h2 {
     font-size:29px;
@@ -2069,7 +2069,7 @@ body[data-page=home] .site-header {
     padding-block:38px;
   }
   .page-intro .eyebrow {
-    font-size:42px;
+    font-size:22px;
     line-height:1.2;
     margin-bottom:12px;
   }
@@ -2260,7 +2260,7 @@ body[data-page=home] .site-header {
     width:calc(100% - 32px);
   }
   .hero-content .script-title {
-    font-size:40px;
+    font-size:22px;
   }
   .hero-content h1,.hero-content h2 {
     font-size:36px;
